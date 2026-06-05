@@ -1,0 +1,25 @@
+Para obter a lib tKinter é necessário baixar o  pacote
+Linux:
+sudo apt-get install python3-tk 
+https://stackoverflow.com/questions/25905540/importerror-no-module-named-tkinter
+
+Label(master=root, text="Ola mundo!")
+master - Janela que queremos colocar o text
+
+pack() - Realizar o empacotamento do que foi configurado pra janela
+
+PhotoImage - So aceita images com extensao .gif
+PhotoImage(file="gif.gif").subsample(5)
+
+subsample - Diminui o tamanho da imagem - 5 - A cada 5 pixel ele diminui o tamanho da imagem
+Label(master=root, text="Ola mundo!", image=photo, width=300, height=180)
+
+- A posicao de componentes na janela é gerenciada pelo  geometry manager da tkinter. Declaramos as posicoes no metodo pack()
+
+image = Label(master=root, image=photo)
+image.pack(side=TOP)
+text = Label(master=root, font=("Courier", 18), text='Ola alunos da UNIVESP')
+text.pack(side=BOTTOM)
+
+grid() -> Transforma a janela em matriz. Cada janela pode armazenas um widget.
+

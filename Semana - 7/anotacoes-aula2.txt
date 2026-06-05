@@ -1,0 +1,16 @@
+Programacao orientada a eventos - 
+Aguarda um evento na interface grafica realizada pelo usuario
+
+Quando uma interface grafica é iniciada com a funcao mainloop(), o interpretador inicia um loop
+infinito chamado de: loop de eventos. 
+
+while True:
+    aguarda um evento
+    executa uma funcao de tratamento associado
+
+Eventos: clique, movimento do mouse, tecla digitada e etc
+
+arquivos da aula02:
+event-time e event-text
+
+columnspan=2 - Junta 2 colunas em uma só
