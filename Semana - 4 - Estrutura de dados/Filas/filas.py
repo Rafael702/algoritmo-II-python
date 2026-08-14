@@ -1,21 +1,9 @@
-class Fila():
-    def __init__(self):
-        self.data = []
+import sys
+from pathlib import Path
 
-    def inserir(self, x):
-        self.data.append(x)
-    
-    def remover(self):
-        if self.empty:
-            print(self.top())
-            return self.data.pop(0)
-    
-    def top(self):
-        if self.empty:
-            return self.data[0]
+sys.path.append(str(Path(__file__).resolve().parents[2]))
 
-    def empty(self):
-        return not len(self.data) > 0
+from comum.estruturas import Fila
 
 f = Fila()
 
@@ -24,7 +12,5 @@ f.inserir(2)
 f.inserir(3)
 f.inserir(4)
 
-f.remover()
-f.remover()
-f.remover()
-f.remover()
+while not f.empty():
+    print(f.remover())

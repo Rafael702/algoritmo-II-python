@@ -1,12 +1,19 @@
-from tkinter import Tk, Label, PhotoImage, TOP, BOTTOM
+import sys
+from pathlib import Path
+from tkinter import Label, PhotoImage, TOP, BOTTOM
 
-root = Tk()
-photo = PhotoImage(file="gif.gif").subsample(5)
-#hello = Label(master=root, text="Ola mundo!", image=photo, width=300, height=300)
-#hello.pack()
-image = Label(master=root, image=photo)
-image.pack(side=TOP)
-text = Label(master=root, font=("Courier", 18), text='Ola alunos da UNIVESP')
-text.pack(side=BOTTOM)
-root.mainloop() #cria janela
+sys.path.append(str(Path(__file__).resolve().parents[1]))
 
+from comum.janela import executar_janela
+
+
+def construir(root):
+    photo = PhotoImage(file=str(Path(__file__).parent / 'gif.gif')).subsample(5)
+    image = Label(master=root, image=photo)
+    image.image = photo
+    image.pack(side=TOP)
+    text = Label(master=root, font=("Courier", 18), text='Ola alunos da UNIVESP')
+    text.pack(side=BOTTOM)
+
+
+executar_janela(construir)

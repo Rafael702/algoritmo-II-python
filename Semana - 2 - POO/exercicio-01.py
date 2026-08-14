@@ -33,8 +33,7 @@ g.bonus()
 print(g)
 
 class seguranca(funcionario):
-    def __init__(self, nome, dtAdmissao,salario):
-        super().__init__(nome,dtAdmissao,salario)
-        
+    pass
+
 s = seguranca("Aroldo", "25/11/1985", 2600)
 print(s)
