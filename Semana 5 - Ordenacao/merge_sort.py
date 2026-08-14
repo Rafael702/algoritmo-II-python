@@ -1,3 +1,6 @@
+from math import inf
+
+
 def merge_sort(v,ini, fim):
     if ini < fim:
         print("Inicio:",ini, " Fim:",fim) 
@@ -12,9 +15,9 @@ def intercala(v,ini,meio,fim):
     R = v[meio+1:fim+1]
     print("Left:",L)
     print("Rigth",R)
-    #sentinelas - valor maximo - evita que a incrementacao ultrapasse uma quantidade devida de indices
-    L.append(999) 
-    R.append(999)
+    #sentinelas - infinito - evita que a incrementacao ultrapasse uma quantidade devida de indices
+    L.append(inf)
+    R.append(inf)
     i = 0
     j = 0
     for k in range(ini,fim+1):

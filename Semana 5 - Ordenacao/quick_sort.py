@@ -1,4 +1,6 @@
 def quick_sort(v,ini,fim):
+    if ini >= fim:
+        return
     meio = (ini + fim) //2
     pivo = v[meio]
     i = ini
