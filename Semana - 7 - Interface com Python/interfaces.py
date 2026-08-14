@@ -1,7 +1,11 @@
-from tkinter import Tk, Label, PhotoImage, TOP, BOTTOM
+import sys
+from tkinter import Tk, Label, PhotoImage, TOP, BOTTOM, TclError
 
 root = Tk()
-photo = PhotoImage(file="gif.gif").subsample(5)
+try:
+    photo = PhotoImage(file="gif.gif").subsample(5)
+except TclError as erro:
+    sys.exit('Nao foi possivel carregar "gif.gif": {}'.format(erro))
 #hello = Label(master=root, text="Ola mundo!", image=photo, width=300, height=300)
 #hello.pack()
 image = Label(master=root, image=photo)

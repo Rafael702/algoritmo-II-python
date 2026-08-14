@@ -1,12 +1,16 @@
 from tkinter import Tk, Button, Label, Entry
-from tkinter.messagebox import showinfo
+from tkinter.messagebox import showinfo, showerror
 from time import strftime, strptime
 
 def clicked():
     global entry
     date = entry.get()
-    weekday = strftime('%A', strptime(date, '%b %d, %Y'))
-    
+    try:
+        weekday = strftime('%A', strptime(date, '%b %d, %Y'))
+    except ValueError:
+        showerror(message='Data invalida: {!r}. Use o formato "Jan 01, 2020".'.format(date))
+        return
+
     showinfo(message='{} was a {}'.format(date,weekday))
 
 

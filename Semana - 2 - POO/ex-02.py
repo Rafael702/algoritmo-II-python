@@ -24,10 +24,11 @@ class Point:
     # x + y ==> (2,3) + (2,2) => (4,6)
     # x +_8 ==> (2,3) + 8 => (10,11)
     def __add__(self,other):
-        if type(other) == Point:
+        if isinstance(other, Point):
             return Point(self.x + other.x, self.y + other.y)
-        else:
+        if isinstance(other, (int, float)):
             return Point(self.x + other, self.y + other)
+        return NotImplemented
 
 p = Point(1,2)
 print(p)
