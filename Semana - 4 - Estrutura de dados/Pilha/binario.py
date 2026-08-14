@@ -1,4 +1,9 @@
-from pilha import Pilha
+import sys
+from pathlib import Path
+
+sys.path.append(str(Path(__file__).resolve().parents[2]))
+
+from comum.estruturas import Pilha
 
 p = Pilha()
 num = 13
@@ -9,4 +14,4 @@ while num > 0:
     p.push(resto)
 
 while not p.empty():
-    p.pop()
+    print(p.pop())
