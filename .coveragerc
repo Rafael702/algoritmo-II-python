@@ -1,0 +1,10 @@
+[run]
+source =
+    Semana - 2 - POO
+    Semana - 4 - Estrutura de dados
+    Semana 5 - Ordenacao
+omit =
+    tests/*
+
+[report]
+show_missing = True
